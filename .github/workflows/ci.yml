@@ -62,7 +62,7 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }}
       
       - name: Upload coverage artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: coverage-report
           path: coverage/
@@ -94,7 +94,7 @@ jobs:
             --release
       
       - name: Upload Dev APK
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: app-dev-release
           path: build/app/outputs/flutter-apk/app-release.apk
@@ -126,7 +126,7 @@ jobs:
             --release
       
       - name: Upload Staging APK
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: app-staging-release
           path: build/app/outputs/flutter-apk/app-release.apk
@@ -163,7 +163,7 @@ jobs:
             --release
       
       - name: Upload Production APK
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: app-prod-release
           path: build/app/outputs/flutter-apk/app-release.apk
